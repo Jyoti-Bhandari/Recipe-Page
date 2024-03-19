@@ -1,0 +1,249 @@
+/***** font import *****/
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Young+Serif&display=swap');
+
+
+/***** global css *****/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --clr-primary-l: hsl(14, 45%, 36%);
+    --clr-primary-d: hsl(332, 51%, 32%);
+
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-rose-white: hsl(330, 100%, 98%);
+    --clr-light-grey: hsl(30, 18%, 87%);
+    --clr-wenge-brown: hsl(30, 10%, 34%);
+    --clr-dark-charcoal: hsl(24, 5%, 18%);
+    --clr-main-bg: #f3e5d8;
+
+    --b-radius: 1rem;
+
+    --ff-primary: 'Outfit', sans-serif;
+    --ff-title: 'Young Serif', serif;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: var(--ff-primary);
+}
+
+body {
+    font-size: 1.6rem;
+    background: var(--clr-main-bg);
+}
+
+main {
+    width: 100%;
+    color: var(--clr-wenge-brown);
+}
+
+.double-wapper-list li::marker {
+    color: var(--clr-primary-l);
+    font-weight: bold;
+    font-family: "Poppins";
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.container {
+    background-color: var(--clr-white);
+    max-width: 70rem;
+}
+
+/***** some utility css *****/
+.bold {
+    font-weight: 800;
+    font-size: 1.66rem;
+}
+
+.lists-detail p {
+    display: inline;
+    line-height: 1.6;
+}
+
+.underline-class {
+    border-bottom: 1px solid var(--clr-light-grey);
+}
+
+/***** Omelette Image Wapper *****/
+
+.image-wapper {
+    width: 100%;
+}
+
+.image-wapper-recipe {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/***** Heading Wapper Text *****/
+
+.heading-wapper {
+    padding-inline: 3.2rem;
+    padding-block: 4.2rem;
+}
+
+.heading-wapper-title {
+    color: var(--clr-dark-charcoal);
+    font-family: var(--ff-title);
+    font-weight: 400;
+    font-size: 3.6rem;
+    line-height: 1.1;
+}
+
+.heading-wapper-intro-para {
+    padding-block: 2.4rem;
+    line-height: 1.6;
+}
+
+/***** Preparation Time Wapper *****/
+
+.prep-wapper {
+    background-color: var(--clr-rose-white);
+    padding-inline: 2.4rem;
+    padding-block: 2.6rem;
+    margin-bottom: 2rem;
+    border-radius: var(--b-radius);
+}
+
+.prep-wapper-heading {
+    color: var(--clr-primary-d);
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.prep-wapper-list {
+    padding-left: 2rem;
+}
+
+.prep-wapper-list li:not(:last-child) {
+    padding-block: .75rem;
+}
+
+.prep-wapper-list li:last-child {
+    padding-top: .75rem;
+}
+
+.prep-wapper-list .bold {
+    padding-right: 1rem;
+}
+
+/***** common css for Ingredients Wapper, Instructions Wapper, Nutrition Wapper *****/
+
+.double-wapper {
+    padding-block: 2rem;
+    padding-left: 3rem;
+}
+
+.double-wapper-heading {
+    color: var(--clr-primary-l);
+    font-size: 2.6rem;
+    font-family: var(--ff-title);
+}
+
+.double-wapper-list {
+    padding-left: 1.35rem;
+    margin-top: 1.6rem;
+}
+
+.double-wapper-list li {
+    padding-block: .75rem;
+    padding-left: 1.2rem;
+}
+
+/***** Nutrition Wapper *****/
+
+.double-wapper-subheading {
+    margin-top: 1.6rem;
+}
+
+.nutrition-wapper-list {
+    list-style-type: none;
+}
+
+.flex-list {
+    display: flex;
+    margin-top: 1rem;
+    padding-left: 1rem;
+    padding-block: 1.1rem;
+    border-bottom: 1px solid var(--clr-light-grey);
+}
+
+.flex-list:last-child {
+    border-bottom: none;
+}
+
+.flex-list-name,
+.flex-list-value {
+    flex: 1 0 50%;
+}
+
+.flex-list-value {
+    font-weight: 800;
+    color: var(--clr-primary-l);
+}
+
+/***** media queries *****/
+
+@media screen and (min-width: 700px) {
+    main {
+        display: grid;
+        place-items: center;
+        place-content: center;
+        margin-top: 15rem;
+    }
+
+    .container {
+        border-radius: calc(2.5 * var(--b-radius));
+    }
+
+    .image-wapper {
+        padding: 4rem;
+        padding-bottom: 0;
+    }
+
+    .image-wapper-recipe {
+        border-radius: calc(1.25 * var(--b-radius));
+    }
+
+    .heading-wapper-title {
+        font-size: 3.8rem;
+    }
+
+    .heading-wapper {
+        padding-bottom: 1rem;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .prep-wapper {
+        padding-inline: 4.2rem;
+        padding-block: 3, 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .prep-wapper-list li {
+        padding-left: 1.2rem;
+    }
+}
+
+/***** frontend mentor footer css ******/
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    padding-block: 1rem;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
